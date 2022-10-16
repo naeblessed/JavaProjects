@@ -1,0 +1,42 @@
+Time Passed: 2 Generated r: 0.17488167569396285 From One to Two probability: 0.95 Flees on Dog One: 18 Flees on Dog Two: 2
+Time Passed: 3 Generated r: 0.33955606291856844 From One to Two probability: 0.9 Flees on Dog One: 17 Flees on Dog Two: 3
+Time Passed: 4 Generated r: 0.025271384546147302 From One to Two probability: 0.85 Flees on Dog One: 16 Flees on Dog Two: 4
+Time Passed: 5 Generated r: 0.04090774777204831 From One to Two probability: 0.8 Flees on Dog One: 15 Flees on Dog Two: 5
+Time Passed: 6 Generated r: 0.8691622235066374 From One to Two probability: 0.75 Flees on Dog One: 16 Flees on Dog Two: 4
+Time Passed: 7 Generated r: 0.5696651356446266 From One to Two probability: 0.8 Flees on Dog One: 15 Flees on Dog Two: 5
+Time Passed: 8 Generated r: 0.987912072939481 From One to Two probability: 0.75 Flees on Dog One: 16 Flees on Dog Two: 4
+Time Passed: 9 Generated r: 0.5461022483240088 From One to Two probability: 0.8 Flees on Dog One: 15 Flees on Dog Two: 5
+Time Passed: 10 Generated r: 0.8319627631504349 From One to Two probability: 0.75 Flees on Dog One: 16 Flees on Dog Two: 4
+Time Passed: 11 Generated r: 0.36381029173474166 From One to Two probability: 0.8 Flees on Dog One: 15 Flees on Dog Two: 5
+Time Passed: 12 Generated r: 0.9447073006737886 From One to Two probability: 0.75 Flees on Dog One: 16 Flees on Dog Two: 4
+Time Passed: 13 Generated r: 0.8328468229262911 From One to Two probability: 0.8 Flees on Dog One: 17 Flees on Dog Two: 3
+Time Passed: 14 Generated r: 0.3512495045750612 From One to Two probability: 0.85 Flees on Dog One: 16 Flees on Dog Two: 4
+Time Passed: 15 Generated r: 0.8548868404056683 From One to Two probability: 0.8 Flees on Dog One: 17 Flees on Dog Two: 3
+Time Passed: 16 Generated r: 0.07652689170480687 From One to Two probability: 0.85 Flees on Dog One: 16 Flees on Dog Two: 4
+Time Passed: 17 Generated r: 0.44535404596251926 From One to Two probability: 0.8 Flees on Dog One: 15 Flees on Dog Two: 5
+Time Passed: 18 Generated r: 0.7088584394772023 From One to Two probability: 0.75 Flees on Dog One: 14 Flees on Dog Two: 6
+Time Passed: 19 Generated r: 0.9068019534835622 From One to Two probability: 0.7 Flees on Dog One: 15 Flees on Dog Two: 5
+Time Passed: 20 Generated r: 0.8885449610744862 From One to Two probability: 0.75 Flees on Dog One: 16 Flees on Dog Two: 4
+Simulation Number: 0 Time Needed: 732000
+Simulation Number: 1 Time Needed: 2199504
+Simulation Number: 2 Time Needed: 2903376
+Simulation Number: 3 Time Needed: 79530
+Simulation Number: 4 Time Needed: 2
+Simulation Number: 5 Time Needed: 1825722
+Simulation Number: 6 Time Needed: 1313794
+Simulation Number: 7 Time Needed: 615798
+Simulation Number: 8 Time Needed: 1309568
+Simulation Number: 9 Time Needed: 2125820
+Simulation Number: 10 Time Needed: 2537972
+Simulation Number: 11 Time Needed: 108816
+Simulation Number: 12 Time Needed: 151138
+Simulation Number: 13 Time Needed: 503602
+Simulation Number: 14 Time Needed: 1292724
+Simulation Number: 15 Time Needed: 68308
+Simulation Number: 16 Time Needed: 2398738
+Simulation Number: 17 Time Needed: 1297002
+Simulation Number: 18 Time Needed: 217460
+Simulation Number: 19 Time Needed: 1023296
+Average time needed in 20 simulations is: 1135208.5
+
+Process finished with exit code 0
