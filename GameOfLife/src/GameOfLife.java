@@ -1,14 +1,15 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-//venusznrn
 public class GameOfLife {
 
     private boolean[][] board;
-    private int amountOfRows;
-    private int amountOfCols;
-    private double p;
-    public static int otladka = 0;
+    private final int amountOfRows;
+    private final int amountOfCols;
+    private final double p;
 
     public GameOfLife(int amountOfRows, int amountOfCols, double p){
         this.board = new boolean[amountOfRows][amountOfCols];
@@ -22,7 +23,24 @@ public class GameOfLife {
             for (int j = 0; j < this.amountOfCols; j++) {
                 if(Math.random() < this.p)
                     board[i][j] = true;
-                //System.out.println(i + " " + j + " " + board[i][j]);
+                System.out.println(i + " " + j + " " + board[i][j]);
+            }
+        }
+    }
+
+    public void getUserInput() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String  lines = br.readLine();
+
+        String[] strs = lines.trim().split("\\s+");
+
+        for (int i = 0; i < strs.length; i += 2) {
+            board[Integer.parseInt(strs[i])][Integer.parseInt(strs[i+1])] = true;
+        }
+
+        for (int i = 0; i < this.amountOfRows; i++) {
+            for (int j = 0; j < this.amountOfCols; j++) {
+                System.out.println(i + " " + j + " " + board[i][j]);
             }
         }
     }
@@ -69,18 +87,9 @@ public class GameOfLife {
         for (int i = 0; i < this.amountOfRows; i++) {
             for (int j = 0; j < this.amountOfCols; j++) {
                 int liveNeighbours = countAliveNeighbours(i, j);
-//                if(isAlive(i, j)){
-//                    if(liveNeighbours < 2 || liveNeighbours > 3) copyOfBoard[i][j] = false;
-//                } else if(liveNeighbours == 3) copyOfBoard[i][j] = true;
-                if(isAlive(i,j)) {
-                    if (liveNeighbours == 1 || liveNeighbours > 3) {
-                        copyOfBoard[i][j] = false;
-                        otladka++;
-                    }
-                } else if (liveNeighbours == 3){
-                    copyOfBoard[i][j] = true;
-                    otladka++;
-                }
+                if(isAlive(i, j)){
+                    if(liveNeighbours < 2 || liveNeighbours > 3) copyOfBoard[i][j] = false;
+                } else if(liveNeighbours == 3) copyOfBoard[i][j] = true;
             }
         }
         this.board = copyOfBoard;
@@ -96,11 +105,11 @@ public class GameOfLife {
         StdDraw.setYscale(0, board.length);
         for (int i = 0; i < board.length; i++)
             for (int j = 0; j < board[0].length; j++)
-                if(board[i][j]) StdDraw.filledRectangle(i + 0.5, j + 0.5, 0.47, 0.47);
+                if(board[i][j]) StdDraw.filledRectangle(j + 0.5, i + 0.5, 0.47, 0.47);
         StdDraw.show();
     }
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, IOException {
         Scanner scan = new Scanner(System.in);
         int rows = scan.nextInt();
         int cols = scan.nextInt();
@@ -108,13 +117,11 @@ public class GameOfLife {
         StdDraw.setPenColor(StdDraw.BOOK_BLUE);
         StdDraw.enableDoubleBuffering();
         GameOfLife gameOfLife = new GameOfLife(rows, cols, p);
-        gameOfLife.generateInitialState();
+        gameOfLife.getUserInput();
         while(true){
             drawBoard(gameOfLife.getBoard());
-            StdDraw.pause(100);
-            //TimeUnit.SECONDS.sleep(10);
+            StdDraw.pause(100000);
             gameOfLife.updateBoardState();
-            //System.out.println(otladka);
         }
     }
 }
