@@ -23,7 +23,7 @@ public class GameOfLife {
             for (int j = 0; j < this.amountOfCols; j++) {
                 if(Math.random() < this.p)
                     board[i][j] = true;
-                System.out.println(i + " " + j + " " + board[i][j]);
+                //System.out.println(i + " " + j + " " + board[i][j]);
             }
         }
     }
@@ -38,11 +38,11 @@ public class GameOfLife {
             board[Integer.parseInt(strs[i])][Integer.parseInt(strs[i+1])] = true;
         }
 
-        for (int i = 0; i < this.amountOfRows; i++) {
-            for (int j = 0; j < this.amountOfCols; j++) {
-                System.out.println(i + " " + j + " " + board[i][j]);
-            }
-        }
+//        for (int i = 0; i < this.amountOfRows; i++) {
+//            for (int j = 0; j < this.amountOfCols; j++) {
+//                System.out.println(i + " " + j + " " + board[i][j]);
+//            }
+//        }
     }
 
     private boolean isAlive(int i, int j){
@@ -120,7 +120,7 @@ public class GameOfLife {
         gameOfLife.getUserInput();
         while(true){
             drawBoard(gameOfLife.getBoard());
-            StdDraw.pause(100000);
+            StdDraw.pause(2000);
             gameOfLife.updateBoardState();
         }
     }
