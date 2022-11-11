@@ -117,10 +117,11 @@ public class GameOfLife {
         StdDraw.setPenColor(StdDraw.BOOK_BLUE);
         StdDraw.enableDoubleBuffering();
         GameOfLife gameOfLife = new GameOfLife(rows, cols, p);
-        gameOfLife.getUserInput();
+        //gameOfLife.getUserInput();
+        gameOfLife.generateInitialState();
         while(true){
             drawBoard(gameOfLife.getBoard());
-            StdDraw.pause(2000);
+            StdDraw.pause(500);
             gameOfLife.updateBoardState();
         }
     }
